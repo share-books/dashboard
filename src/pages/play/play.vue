@@ -16,7 +16,6 @@
     },
     methods: {
       makeBig() {
-      //  console.log("makeBig")
         this.width = 560
       },
       makeSmall() {
