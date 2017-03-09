@@ -1,30 +1,34 @@
 <template>
   <div style="text-align:center;">
     <el-button type="primary" @click.native="makeBig">大</el-button>
-   <el-button type="primary" @click.native="makeNormal">中</el-button>
+    <el-button type="primary" @click.native="makeNormal">中</el-button>
     <el-button type="primary" @click.native="makeSmall">小</el-button>
     <br />
     <video :width="width" style="margin-top:15px;" controls>
-      <source src="/play" type="video/mp4" /> Your browser does not support HTML5 video.
+      <source :src="playUrl" type="video/mp4" /> Your browser does not support HTML5 video.
     </video>
   </div>
 </template>
 <script>
+  import {Option} from '../resources/option'
+
   export default {
     data() {
-      return { width: 420 }
+      let playUrl = Option.WebServer + "/play"
+      console.log(playUrl)
+      return { width: 800, playUrl }
     },
     methods: {
       makeBig() {
-        this.width = 560
+        this.width = 960
       },
       makeSmall() {
         // console.log("makeSmall")
-        this.width = 320
+        this.width = 400
       },
       makeNormal() {
         // console.log("makeNormal")
-        this.width = 420
+        this.width = 600
       }
     }
   }

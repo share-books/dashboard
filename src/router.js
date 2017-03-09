@@ -12,9 +12,7 @@ import chart from '@/pages/chart'
 import play from '@/pages/play'
 import upload from '@/pages/upload'
 Vue.use(VueRouter)
-/*const root = Vue.component('root', {
-  template: '<router-view></router-view>'
-})*/
+
 
 let routes = [
   {
@@ -80,8 +78,7 @@ let routes = [
         component: play,
         name: '视频播放',
         iconClass: 'el-icon-document'
-      },
-      {
+      },{
         path: 'upload',
         component: upload,
         name: '上传视频',

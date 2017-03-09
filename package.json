@@ -5,8 +5,9 @@
   "author": "lshengjian <lsj178@139.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "start": "pm2 start ./apps.json",
+    "build": "node build/build.js",
+    "dev": "node build/dev-server.js"
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -15,7 +16,8 @@
     "moment": "^2.17.1",
     "socket.io": "^1.7.3",
     "vue": "^2.2.1",
-    "vue-router": "^2.2.0"
+    "vue-router": "^2.2.0",
+    "vue-socket.io": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

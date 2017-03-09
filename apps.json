@@ -1,0 +1,20 @@
+{
+  "apps": [{
+    "name": "backend",
+    "script": "server/server.js",
+    "cwd": "server",
+    "error_file" : "../logs/app-err.log",
+    "out_file"   : "../logs/app-out.log",
+    "pid_file"   : "app.pid",
+    "one_launch_only"  : "true",
+    "env": {
+      
+    }
+  },
+  {
+    "name": "frontend-dev",
+    "script": "build/dev-server.js",
+    "cwd": ".",
+    "one_launch_only"  : "true"
+  }]
+}

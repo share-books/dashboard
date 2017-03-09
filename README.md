@@ -9,7 +9,8 @@
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+cd server && node server
+npm start ( or pm2 start apps.json )  
 
 # build for production with minification
 npm run build
