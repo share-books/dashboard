@@ -321,14 +321,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-#big-form {
-  .el-form {
-    width: 600px;
-
-    .skill-line {
-      margin: 10px 0;
-    }
-  }
-}
+<style lang="styl" scoped>
+#big-form
+  .el-form
+    width: 600px
+    .skill-line
+      margin: 10px 0
 </style>

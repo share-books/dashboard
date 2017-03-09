@@ -258,11 +258,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-  .el-row {
-    margin-bottom: 25px;
-  }
-  #chart-page, #line-chart, #funnel-chart, #chart-pie {
-    height: 350px;
-  }
+<style lang="styl" scoped>
+.el-row
+  margin-bottom: 25px
+#chart-page, #line-chart, #funnel-chart, #chart-pie
+  height: 350px
 </style>

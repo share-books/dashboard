@@ -1,0 +1,3 @@
+exports.playVideo = function (req, res, next) {
+  console.log("playVideo")
+}

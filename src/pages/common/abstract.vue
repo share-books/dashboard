@@ -49,26 +49,20 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  .abstract {
-    .card-wrapper {
-      display: flex;
-      flex-direction: column;
-      .img {
-        height: 150px;
-      }
-      .text {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        a {
-          color: #20a0ff;
-        }
-      }
-      img {
-        width: 100%;
-        height: 150px;
-      }
-    }
-  }
+<style lang="styl">
+.abstract
+  .card-wrapper
+    display: flex
+    flex-direction: column
+    .img
+      height: 150px
+    .text
+      display: flex
+      justify-content: space-around
+      align-items: center
+      a
+        color: #20a0ff
+    img
+      width: 100%
+      height: 150px
 </style>

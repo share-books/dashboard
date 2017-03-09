@@ -6,13 +6,15 @@ import NotFound from '@/pages/common/404'
 // list with filters page
 import ListWithFilters from '@/pages/list/with-filters'
 import BigForm from '@/pages/form/big-form'
-import Login from '@/pages/login/login'
-import chart from '@/pages/chart/chart'
-import play from '@/pages/play/play'
-Vue.use(VueRouter);
-const root = Vue.component('root', {
+import Home from '@/pages/home'
+import Login from '@/pages/login'
+import chart from '@/pages/chart'
+import play from '@/pages/play'
+
+Vue.use(VueRouter)
+/*const root = Vue.component('root', {
   template: '<router-view></router-view>'
-})
+})*/
 
 let routes = [
   {
@@ -33,7 +35,7 @@ let routes = [
   },
   {
     path: '/',
-    component: root,
+    component: Home,
     meta: {
       requiresAuth: true
     },
@@ -78,7 +80,6 @@ let routes = [
         component: play,
         name: '视频播放',
         iconClass: 'el-icon-document'
-       
       }
     ]
   },

@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-import './style.scss'
+//import './style.styl'
 
 import Breadcrumb from './components/breadcrumb'
 import Mock from './mock'
