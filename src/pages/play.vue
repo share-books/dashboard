@@ -5,7 +5,7 @@
     <el-button type="primary" @click.native="makeSmall">小</el-button>
     <br />
     <video :width="width" style="margin-top:15px;" controls>
-      <source src="/static/demo.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
+      <source src="/play" type="video/mp4" /> Your browser does not support HTML5 video.
     </video>
   </div>
 </template>
