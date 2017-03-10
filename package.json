@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "vue2 vuex vue-route study demo",
   "author": "lshengjian <lsj178@139.com>",
-  "private": true,
+  "keywords": [
+    "vue2",
+    "dashboard",
+    "webpack",
+    "vue-route",
+    "video",
+    "express"
+  ],
   "scripts": {
     "start": "pm2 start ./apps.json",
     "build": "node build/build.js",
