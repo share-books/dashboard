@@ -5,7 +5,7 @@ let path = require('path')
 exports.playVideo=function (req, res) {
 
  
-  let file = path.resolve(__dirname, "./upload/demo.mp4");
+  let file = path.resolve(__dirname, "/upload/demo.mp4");
   fs.stat(file, function (err, stats) {
     if (err) {
       if (err.code === 'ENOENT') {

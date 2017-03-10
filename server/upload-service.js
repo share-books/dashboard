@@ -18,18 +18,22 @@ let path = require('path')
       if (Stat.isFile()) {
         Files[Name]['Downloaded'] = Stat.size
         Place = Stat.size / 524288
+        console.log(Name,"have data:",Stat.size)
       }
-    } catch (er) { } //It's a New File
+    } catch (er) {
+      console.log(Name,"is new")
+     } //It's a New File
     fs.open("Temp/" + Name, 'a', 0755, function (err, fd) {
       if (err) {
         console.log(err)
       } else {
       //  Files[Name]={}
+      console.log(Name," created!")
         Files[Name]['Handler'] = fd //We store the file handler so we can write to it later
          Files[Name]['Downloaded'] = 0
         socket.emit('MoreData', {
-          'Place': Place,
-          Percent: 0
+           Place,
+           Percent: 0
         })
       }
     })
@@ -55,7 +59,7 @@ let path = require('path')
 
           })
         })
-        var out = fs.createWriteStream("../upload/" + Name)
+        var out = fs.createWriteStream(__dirname+"/upload/" + Name)
         inp.pipe(out)
       })
     } else if (Files[Name]['Data'].length > 10485760) { //If the Data Buffer reaches 10MB
