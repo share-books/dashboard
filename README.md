@@ -5,8 +5,8 @@
 Images
 ------
 
-![dashborad home](static/demo-1.png "dashborad demo")
-![upload video](static/demo-2.png "upload big file!")
+![dashborad home](static/demo1.png "dashborad demo")
+![upload video](static/demo2.png "upload big file!")
 
 ## Build Setup
 
