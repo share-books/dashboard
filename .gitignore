@@ -3,5 +3,6 @@ node_modules/
 dist/
 logs/
 server/upload/*
+server/Temp/*
 npm-debug.log
 yarn-error.log
