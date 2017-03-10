@@ -20,7 +20,7 @@
 
 		data() {
 			return {
-				SelectedFile: '',
+				SelectedFile: null,
 				FReader: null,
 				Name: ''
 			}
@@ -36,15 +36,15 @@
 				this.FReader.readAsBinaryString(NewFile)
 			},
 			Done(data) {
-				/*	let Content = "Video Successfully Uploaded !!"
-					//	Content += "<img id='Thumb' src='" + Path + data['Image'] + "' alt='" + Name + "'><br>";
+					let Content = "Video Successfully Uploaded !!"
+					Content += "<img id='Thumb' src='" +  data['Image'] + "' alt='" + Name + "'><br>";
 					Content += "<button	type='button' name='Upload' value='' id='Restart' class='Button'>Upload Another</button>";
 					document.getElementById('UploadArea').innerHTML = Content;
 					document.getElementById('Restart').addEventListener('click', this.Refresh);
 					document.getElementById('UploadBox').style.width = '270px';
 					document.getElementById('UploadBox').style.height = '270px';
 					document.getElementById('UploadBox').style.textAlign = 'center';
-					document.getElementById('Restart').style.left = '20px';*/
+					document.getElementById('Restart').style.left = '20px';
 				this.$message({
 					message: '提交成功',
 					type: 'success'
@@ -62,10 +62,10 @@
 				location.reload(true)
 			},
 			UpdateBar(percent) {
-				document.getElementById('ProgressBar').style.width = percent + '%';
-				document.getElementById('percent').innerHTML = (Math.round(percent * 100) / 100) + '%';
-				let MBDone = Math.round(((percent / 100.0) * this.SelectedFile.size) / 1048576);
-				document.getElementById('MB').innerHTML = MBDone;
+				document.getElementById('ProgressBar').style.width = percent + '%'
+				document.getElementById('percent').innerHTML = (Math.round(percent * 100) / 100) + '%'
+				let MBDone = Math.round(((percent / 100.0) * this.SelectedFile.size) / 1048576)
+				document.getElementById('MB').innerHTML = MBDone
 			},
 			StartUpload() {
 				if (document.getElementById('FileBox').value != "") {
