@@ -39,8 +39,10 @@
 					message: '提交成功',
 					type: 'success'
 				})
+				this.$router.replace({ path: 'play', query: { fn: this.Name }})
 			}
 		},
+
 		methods: {
 			FileChosen(evnt) {
 				this.SelectedFile =evnt.target.files[0]

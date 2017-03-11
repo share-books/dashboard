@@ -2,7 +2,7 @@
 node_modules/
 dist/
 logs/
-server/upload/*
-server/Temp/*
+server/upload/*.*
+server/temp/*.*
 npm-debug.log
 yarn-error.log

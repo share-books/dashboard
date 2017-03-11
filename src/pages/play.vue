@@ -14,7 +14,11 @@
 
   export default {
     data() {
-      let playUrl = Option.WebServer + "/play"
+      let ps=this.$route.query
+      
+      let fn=ps.fn||'demo.mp4'
+     console.log(fn)
+      let playUrl = Option.WebServer + "/play?fn="+fn
       console.log(playUrl)
       return { width: 800, playUrl }
     },

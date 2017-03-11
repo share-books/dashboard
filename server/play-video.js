@@ -1,16 +1,20 @@
 let fs = require('fs')
 let path = require('path')
 
-//exports.playVideo
-exports.playVideo=function (req, res) {
 
- 
-  let file = path.resolve(__dirname, "/upload/demo.mp4");
+exports.playVideo=function (req, res) {
+ // console.log(req.query)
+ // console.log(req.params)
+  let fname=req.query.fn||'demo.mp4'
+  if (fname=='undefined') fname='demo.mp4'
+  let file = path.resolve(__dirname, "upload/"+fname);
   fs.stat(file, function (err, stats) {
     if (err) {
       if (err.code === 'ENOENT') {
         // 404 Error if file not found
-        console.log("file not found")
+       // console.log(__dirname)
+       // console.log(__filename)
+        console.log(file," not found")
         res.statusCode = 404;
         return res;
       }

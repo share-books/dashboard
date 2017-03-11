@@ -74,6 +74,7 @@ let routes = [
        
       },
       {
+       // name: 'play',
         path: 'play',
         component: play,
         name: '视频播放',
