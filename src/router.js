@@ -9,6 +9,7 @@ import BigForm from '@/pages/form/big-form'
 import Home from '@/pages/home'
 import Login from '@/pages/login'
 import chart from '@/pages/chart'
+import shop from '@/pages/shop'
 import play from '@/pages/play'
 import upload from '@/pages/upload'
 Vue.use(VueRouter)
@@ -72,6 +73,12 @@ let routes = [
         name: '图表',
         iconClass: 'el-icon-document'
        
+      },
+      {
+        path: 'shop',
+        component: shop,
+        name: '购物示意',
+        iconClass: 'el-icon-document'
       },
       {
        // name: 'play',

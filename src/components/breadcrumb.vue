@@ -1,10 +1,13 @@
 <template lang="html">
+<div>
   <el-breadcrumb separator="/">
     <span class="db-breadcrumb-loc">位置：</span>
     <el-breadcrumb-item v-for="item in breadcrumbs" :to="item">
       {{ item.name }}
     </el-breadcrumb-item>
   </el-breadcrumb>
+   <hr>
+   </div>
 </template>
 
 <script>

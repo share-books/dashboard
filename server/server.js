@@ -18,10 +18,10 @@ let io = require('socket.io')(server);
 start(io)
 
 
-app.use('/static', express.static('./static'))
+app.use('/static', express.static('dist/static'))
 
 function handler(req, res) {
-	fs.readFile(__dirname + '/index.html',
+	fs.readFile(__dirname + '/dist/index.html',
 		function (err, data) {
 			if (err) {
 				res.writeHead(500);
