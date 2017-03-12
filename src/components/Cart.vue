@@ -1,7 +1,7 @@
 <template>
   <div class="cart">
     <h2>购物车情况</h2>
-    <p v-show="!products.length"><i>请先采购吧:-)</i></p>
+    <p v-show="!products.length">欢迎选购:-)</p>
     <ul>
       <li v-for="p in products">
         {{ p.title }} - {{ p.price | currency }} x {{ p.quantity }}

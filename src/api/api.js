@@ -35,7 +35,7 @@ export const getProducts = cb => {
       setTimeout(() => resolve(_products), 100)
     })
 }
-/*
+
 export const buyProducts = (products) => {
      return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -46,13 +46,4 @@ export const buyProducts = (products) => {
       }, 100)
     })
 
-}*/
-
-export const buyProducts = (products, cb, errorCb)=>{
-    setTimeout(() => {
-      // simulate random checkout failure.
-      (Math.random() > 0.5 || navigator.userAgent.indexOf('PhantomJS') > -1)
-        ? cb()
-        : errorCb()
-    }, 100)
-  }
+}

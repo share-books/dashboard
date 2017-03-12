@@ -24,3 +24,12 @@ new Vue({
   router,
   store
 }).$mount('#app')
+
+/*
+ "babel": {
+      "presets": [
+        "@ava/stage-4",
+        "@ava/transform-test-files"
+      ]
+    },
+*/

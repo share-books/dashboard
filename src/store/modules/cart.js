@@ -1,8 +1,7 @@
 import api from '../../api'
 import * as types from '../types'
 
-// initial state
-// shape: [{ id, quantity }]
+
 const state = {
   added: [],
   checkoutStatus: null
@@ -15,26 +14,17 @@ const getters = {
 
 // actions
 const actions = {
-   checkout ({ commit, state }, products) {
-    const savedCartItems = [...state.added]
-    commit(types.CHECKOUT_REQUEST)
-    api.buyProducts(
-      products,
-      () => commit(types.CHECKOUT_SUCCESS),
-      () => commit(types.CHECKOUT_FAILURE, { savedCartItems })
-    )
-  }
- /* async checkout({ commit, state }, products) {
+  async checkout({ commit, state }, products) {
     const savedCartItems = [...state.added]
     commit(types.CHECKOUT_REQUEST)
     try {
-     let ok= await api.buyProducts(roducts)
-     console.log(ok)
-      commit(types.CHECKOUT_SUCCESS,{info:ok})
+     await api.buyProducts(products)
+     commit(types.CHECKOUT_SUCCESS)
     } catch (err) {
-      commit(types.CHECKOUT_FAILURE, { savedCartItems,info:err })
+      console.log(err)
+      commit(types.CHECKOUT_FAILURE, { savedCartItems })
     }
-  }*/
+  }
 }
 
 // mutations
