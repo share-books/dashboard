@@ -37,3 +37,5 @@ npm run build --report
   - mock —— API请求拦截器
   - pages —— 页面文件夹
   - resources —— mock 数据源
+
+感谢：https://github.com/ElemeFE/element-dashboard
