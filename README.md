@@ -12,7 +12,11 @@ Images
 
 ``` bash
 # install dependencies
+mkdir server/{upload,temp}
+
 npm install -g pm2
+(linux: sudo npm install -g pm2)
+
 npm install
 
 # serve with hot reload at localhost:8080
